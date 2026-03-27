@@ -149,4 +149,241 @@ Este teste simula uma carga computacional aritmética intensa, muito comum em:
 📌 **Resumo:** Assembly e C dominam em operações matemáticas intensivas, enquanto Python sofre grande penalidade por interpretação.
 
 ---
+---
+# 🚀 Como Executar os Códigos (Benchmarks)
+
+Esta seção descreve como compilar e executar cada algoritmo implementado neste repositório.  
+Todos os testes foram projetados para rodar em ambiente Linux (Ubuntu 22.04+), seguindo o padrão experimental do artigo.
+
+📌 **Recomendação:** execute os códigos em modo otimizado para garantir resultados consistentes.
+
+---
+
+## 🧱 Fibonacci (Benchmark de CPU)
+
+📂 Pasta: `fibonacci/`  
+🎯 Objetivo: medir tempo de execução com recursão profunda (**n=40**).
+
+---
+
+### 🟦 Assembly (NASM x86_64)
+
+📄 Arquivo: `fibonacci/assembly.asm`
+
+```bash
+nasm -f elf64 fibonacci/assembly.asm -o fib_asm.o
+gcc fib_asm.o -no-pie -o fib_asm
+./fib_asm
+```
+
+📌 Observação: este código utiliza instruções próximas ao hardware, garantindo máximo desempenho.
+
+---
+
+### 🟧 C (GCC)
+
+📄 Arquivo: `fibonacci/c.c`
+
+```bash
+gcc -O3 fibonacci/c.c -o fib_c
+./fib_c
+```
+
+📌 `-O3` ativa otimizações agressivas do compilador, aproximando a execução do limite da CPU.
+
+---
+
+### 🦀 Rust
+
+📄 Arquivo: `fibonacci/rust.rs`
+
+```bash
+rustc -C opt-level=3 fibonacci/rust.rs -o fib_rust
+./fib_rust
+```
+
+📌 Rust oferece alta performance com segurança de memória garantida pelo compilador.
+
+---
+
+### ☕ Java
+
+📄 Arquivo: `fibonacci/java.java`
+
+```bash
+javac fibonacci/java.java
+java java
+```
+
+📌 Java executa via JVM, podendo apresentar overhead de inicialização e garbage collector.
+
+---
+
+### 🐍 Python
+
+📄 Arquivo: `fibonacci/python.py`
+
+```bash
+python3 fibonacci/python.py
+```
+
+📌 Python executa interpretado, por isso o tempo cresce drasticamente em recursão profunda.
+
+---
+
+---
+
+# 🧠 Vetor (Benchmark de Memória)
+
+📂 Pasta: `vetor/`  
+🎯 Objetivo: medir consumo de memória durante alocação de um vetor com **1.000.000 inteiros**.
+
+---
+
+### 🟧 C (GCC)
+
+📄 Arquivo: `vetor/c.c`
+
+```bash
+gcc -O3 vetor/c.c -o vetor_c
+./vetor_c
+```
+
+📌 Em C, a memória é alocada manualmente com `malloc()`, garantindo máximo controle.
+
+---
+
+### 🦀 Rust
+
+📄 Arquivo: `vetor/rust.rs`
+
+```bash
+rustc -C opt-level=3 vetor/rust.rs -o vetor_rust
+./vetor_rust
+```
+
+📌 Rust usa heap de forma segura e evita erros clássicos como *use-after-free*.
+
+---
+
+### ☕ Java
+
+📄 Arquivo: `vetor/java.java`
+
+```bash
+javac vetor/java.java
+java java
+```
+
+📌 O consumo de memória é maior devido ao heap gerenciado pela JVM.
+
+---
+
+### 🐍 Python
+
+📄 Arquivo: `vetor/python.py`
+
+```bash
+python3 vetor/python.py
+```
+
+📌 Python utiliza objetos dinâmicos e estruturas internas complexas, aumentando o uso de RAM.
+
+---
+
+---
+
+# 🧮 Matriz (Benchmark de Stress Matemático)
+
+📂 Pasta: `matriz/`  
+🎯 Objetivo: avaliar desempenho em multiplicação de matrizes **100×100**.
+
+---
+
+### 🟧 C (GCC)
+
+📄 Arquivo: `matriz/c.c`
+
+```bash
+gcc -O3 matriz/c.c -o matriz_c
+./matriz_c
+```
+
+📌 C é altamente eficiente para operações aritméticas intensivas.
+
+---
+
+### 🦀 Rust
+
+📄 Arquivo: `matriz/rust.rs`
+
+```bash
+rustc -C opt-level=3 matriz/rust.rs -o matriz_rust
+./matriz_rust
+```
+
+📌 Rust mantém performance alta com segurança forte no acesso à memória.
+
+---
+
+### ☕ Java
+
+📄 Arquivo: `matriz/java.java`
+
+```bash
+javac matriz/java.java
+java java
+```
+
+📌 Java apresenta desempenho intermediário devido à JVM e otimizações JIT.
+
+---
+
+### 🐍 Python
+
+📄 Arquivo: `matriz/python.py`
+
+```bash
+python3 matriz/python.py
+```
+
+📌 Python puro tende a ser lento para matrizes, pois cada operação passa pelo interpretador.
+
+---
+
+---
+
+# ⏱️ Execução Automatizada (Modo Benchmark)
+
+Se você quiser rodar todos os testes de forma organizada:
+
+```bash
+./fib_asm
+./fib_c
+./fib_rust
+java java
+python3 fibonacci/python.py
+
+./vetor_c
+./vetor_rust
+java java
+python3 vetor/python.py
+
+./matriz_c
+./matriz_rust
+java java
+python3 matriz/python.py
+```
+
+---
+
+# 📌 Observação Importante (Reprodutibilidade)
+
+Para resultados mais próximos do artigo:
+
+- feche aplicações em segundo plano  
+- execute cada teste pelo menos 10 vezes  
+- use sempre modo otimizado (`-O3`, `opt-level=3`)  
+- rode em Linux para manter consistência
+
 
