@@ -143,7 +143,6 @@ Os benchmarks foram realizados no seguinte ambiente:
 
 ## Fibonacci (Tempo em segundos)
 
-```mermaid
 pie title Tempo relativo (Fibonacci n=40)
     "Assembly (0.001s)" : 1
     "C (0.012s)" : 12
