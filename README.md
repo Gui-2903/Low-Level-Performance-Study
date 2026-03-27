@@ -20,7 +20,7 @@
 
 ---
 
-📍 **Autor:** Guilherme  
+📍 **Autor:** Guilherme e João Pedro 
 🎓 **Instituição:** UEMG - Unidade Carangola  
 📅 **Ano:** 2025  
 
