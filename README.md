@@ -113,45 +113,6 @@ Os benchmarks foram realizados no seguinte ambiente:
 
 ---
 
-## 🧠 Benchmark 2: Consumo de Memória (Vetor 1M Inteiros)
-
-| Linguagem | Memória (MB) |
-|----------|--------------|
-| Assembly | **0.8** |
-| C | 1.2 |
-| Rust | 1.6 |
-| Java | 15.0 |
-| Python | **28.0** |
-
-📌 Observação: linguagens com runtime/GC apresentam maior overhead estrutural.
-
----
-
-## 🧮 Benchmark 3: Multiplicação de Matrizes (100×100)
-
-| Linguagem | Tempo Médio (s) |
-|----------|------------------|
-| Assembly | **0.002** |
-| C | 0.018 |
-| Rust | 0.022 |
-| Java | 0.450 |
-| Python | **3.800** |
-
----
-
-# 📈 Visualização (Gráficos)
-
-## Fibonacci (Tempo em segundos)
-
-pie title Tempo relativo (Fibonacci n=40)
-    "Assembly (0.001s)" : 1
-    "C (0.012s)" : 12
-    "Rust (0.015s)" : 15
-    "Java (0.630s)" : 630
-    "Python (26.660s)" : 26660
-
----
-
 # 🧠 Benchmark 2: Consumo de Memória (Vetor 1M Inteiros)
 
 Este teste avalia o impacto do gerenciamento de memória em diferentes linguagens, medindo o consumo durante a alocação e manipulação de um vetor com **1.000.000 de inteiros**.
@@ -189,15 +150,3 @@ Este teste simula uma carga computacional aritmética intensa, muito comum em:
 
 ---
 
-# 📈 Visualização dos Resultados
-
-## Consumo de Memória (MB)
-
-```mermaid
-bar
-    title Consumo de Memória - Vetor com 1.000.000 Inteiros
-    "Assembly" : 0.8
-    "C" : 1.2
-    "Rust" : 1.6
-    "Java" : 15.0
-    "Python" : 28.0
