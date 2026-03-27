@@ -387,3 +387,33 @@ Para resultados mais próximos do artigo:
 - rode em Linux para manter consistência
 
 
+# 📚 Referência do Artigo
+
+Este repositório é parte do estudo acadêmico desenvolvido para análise comparativa de desempenho, consumo de memória e segurança entre linguagens de programação de diferentes níveis de abstração.
+
+📄 **Título:** *No Coração dos Sistemas: A Relevância da Programação de Baixo Nível para a Eficiência e Segurança em Aplicações Modernas*  
+📌 **Título (EN):** *At the Heart of Systems: The Relevance of Low-Level Programming for Efficiency and Security in Modern Applications*  
+📅 **Ano:** 2025  
+🎓 **Instituição:** Universidade do Estado de Minas Gerais (UEMG) - Unidade Carangola  
+
+---
+
+# 🧾 Como Citar (ABNT)
+
+> SOUSA, Guilherme Ferreira; MURUCCI, João Pedro Bianquini. **No Coração dos Sistemas: A Relevância da Programação de Baixo Nível para a Eficiência e Segurança em Aplicações Modernas**. 2025. Artigo Científico (Sistemas de Informação) – Universidade do Estado de Minas Gerais (UEMG), Unidade Carangola, Carangola, 2025.
+
+---
+
+# 👨‍💻 Autores
+
+| Autor | Formação | Instituição |
+|------|----------|-------------|
+| Guilherme Ferreira Sousa¹ | Estudante de Sistemas de Informação | UEMG - Unidade Carangola |
+| João Pedro Bianquini Murucci² | Estudante de Sistemas de Informação | UEMG - Unidade Carangola |
+
+---
+
+# 🤝 Contribuições
+
+Sugestões e melhorias são bem-vindas!  
+Sinta-se livre para abrir uma **Issue** ou enviar um **Pull Request**.
